@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22063"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:07:09 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA2MzsyMDIyMjNNQVlDMDEwMDsyMDIyLTExLTA0OzA5OjM0OjI3IEFNOzMwNTc="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA2MzsyMDIyMjNNQVlDMDEwMDsyMDIyLTExLTA0OzEwOjA3OjA5IEFNOzIzOzMyMDk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;a b c are coff of quadratic equation&quot;" newline="True"/>
+            <declare name="a, b, c" type="Integer" array="False" size=""/>
+            <output expression="&quot;what is value of a&quot;" newline="True"/>
+            <comment text="x^2 coefficient is a"/>
+            <input variable="a"/>
+            <output expression="&quot;what is value of b&quot;" newline="True"/>
+            <comment text="x coefficient is b"/>
+            <input variable="b"/>
+            <output expression="&quot;what is value of c&quot;" newline="True"/>
+            <comment text="c is constant"/>
+            <input variable="c"/>
+            <declare name="x1, x2" type="Real" array="False" size=""/>
+            <declare name="D" type="Real" array="False" size=""/>
+            <assign variable="D" expression="b^2-4*a*c"/>
+            <assign variable="x1" expression="(-b-sqrt(D))/(2*a)"/>
+            <assign variable="x2" expression="(-b+sqrt(D))/(2*a)"/>
+            <output expression="&quot;the result is :&quot; &amp;x1" newline="True"/>
+            <output expression="&quot;the result is:&quot; &amp;x2" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
