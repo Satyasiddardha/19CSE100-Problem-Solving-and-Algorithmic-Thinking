@@ -1,0 +1,22 @@
+step1:start
+step2:declare secret and assign some number 
+step3:print(welcome to atm and insert your card)
+step4:declare integer pin and print (please enter your pin)
+step5:if pin is not equal to secret print(your pin is wrong please try again) if its equal declare as integer account
+step6:print(enter your account number) and input account
+step7:print(1.check balance 2.diposite 3.change pin 4.withdrawl 5.finish transcation 
+step8:declare the var"x" and give input x
+step9:if x=1
+           check balance
+       else x=2
+           deposite
+step10:print(money you want to deposite)
+step11:if x=3
+           change pin
+                   declare string new pin and print(enter the new pin)
+       else x=4
+           withdrawl
+                   print the money you want to withdrawl and print(collect the money from atm)
+step12:if x=5
+           finish transcation
+step13: print (thank you)
