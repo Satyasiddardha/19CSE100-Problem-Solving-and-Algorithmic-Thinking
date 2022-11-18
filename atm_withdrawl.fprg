@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22063"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-18 11:22:46 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA2MzsyMDIyMjNNQVlDMDEwMDsyMDIyLTExLTE4OzA4OjU3OjQ5IEFNOzMwNzA="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA2MzsyMDIyMjNNQVlDMDEwMDsyMDIyLTExLTE4OzExOjIyOjQ2IEFNOzY7MzE2Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;welcome to atm&quot;" newline="True"/>
+            <declare name="name" type="String" array="False" size=""/>
+            <output expression="&quot;please enter your name&quot;" newline="True"/>
+            <comment text="check your name is correct"/>
+            <input variable="name"/>
+            <declare name="acc" type="Integer" array="False" size=""/>
+            <output expression="&quot;please enter your acc number&quot;" newline="True"/>
+            <comment text="check your pin"/>
+            <input variable="acc"/>
+            <declare name="pin" type="Integer" array="False" size=""/>
+            <output expression="&quot;please enter your pin&quot;" newline="True"/>
+            <input variable="pin"/>
+            <declare name="balance" type="Real" array="False" size=""/>
+            <output expression="&quot;please enter your balance&quot;" newline="True"/>
+            <comment text="check your balance "/>
+            <input variable="balance"/>
+            <declare name="atm" type="Real" array="False" size=""/>
+            <output expression="&quot;please enter your ammount you withdrawn&quot;" newline="True"/>
+            <input variable="atm"/>
+            <if expression="balance&gt;499">
+                <then>
+                    <declare name="secret" type="Integer" array="False" size=""/>
+                    <output expression="&quot;please enter your pin&quot;" newline="True"/>
+                    <comment text="check your pin"/>
+                    <input variable="secret"/>
+                    <if expression="secret==pin">
+                        <then>
+                            <if expression="balance-atm&gt;0">
+                                <then>
+                                    <output expression="&quot;transaction is successfulupdated account  balanceis &quot;&amp;balance-atm" newline="True"/>
+                                    <if expression="balance-atm&lt;500">
+                                        <then>
+                                            <output expression="&quot;current balance is &quot;&amp;balance-atm&amp; &quot;please deposait money to maintain minimum balance otherwise you may attract penalities&quot;" newline="True"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </then>
+                                <else>
+                                    <output expression="&quot;transaction is unsuccesful due to to insufficient funds please run again and enter the amount to be withdrawn lower than&quot; &amp;balance" newline="True"/>
+                                    <breakpoint expression="" always="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;in valid pin please run again and enter correct pin&quot;" newline="True"/>
+                            <breakpoint expression="" always="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="balance&lt;0">
+                        <then>
+                            <output expression="&quot; balance can' be negative pleaswe run again&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;minimum bvalance for withdrawn is 500 due to insufficient funds this transcation can't be processed&quot;" newline="True"/>
+                        </else>
+                    </if>
+                    <breakpoint expression="" always="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
