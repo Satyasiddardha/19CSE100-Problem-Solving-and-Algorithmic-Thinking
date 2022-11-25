@@ -1,0 +1,48 @@
+step1: start
+step2:display enter your pin
+step3:Declare Integer pin
+step4: read pin
+step5:   If pin=24956
+step6:display 1.withdrawl 2.checkbalance 3.change pin 4.add money
+step7:Declare Integer x
+step8:read x
+step9: If x=1
+ step10: display enter the money you want to withdrawl
+  step11: Declare Integer bal
+step12:  Assign bal = 1000
+ step13: Declare Integer withdrawl
+step14: read withdrawl
+ step15: Declare Integer newb            
+ step16: Assign newb = bal-withdrawl
+ step17: display "your newb:" &newb
+step18:  Else
+ step19: If x=2
+ step20: Declare Integer balance              
+ step21:  Assign balance = 100000
+ step22 : display "your current balance is:" &balance
+ step23:  Else
+ step24: If x=3
+ step25: Output "enter your  pin"
+ step26: Input pin
+ step27: If pin=24956
+ step28: display "enter new pin"
+ step29: Declare Integer newpin
+ step30:Input newpin
+ step31 :display "newpin is changed"
+ step32:Else
+ step33: display "your pin is wrong"    
+  step34: Else
+ step35: If x=4
+ step36: display "enter the money you want to add"
+ step37:Declare Integer newmoney
+ step38: read newmoney
+ step39:Declare Integer balance
+ step40: Assign balance = 2000
+ step41:Declare Integer s
+ step42:Assign s = newmoney+balance
+ step43: diaplay "current money in your bank:" &
+ step44 :Else
+ step45: display plz enter the number
+  step46: Else
+step47: display your pin wrong please try again
+   
