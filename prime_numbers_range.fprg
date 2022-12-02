@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Rushy"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 07:06:51 PM"/>
+        <attribute name="created" value="UnVzaHk7UlVTSFlFTkRSQTsyMDIyLTEyLTAyOzA2OjQ3OjI1IFBNOzI1OTE="/>
+        <attribute name="edited" value="UnVzaHk7UlVTSFlFTkRSQTsyMDIyLTEyLTAyOzA3OjA2OjUxIFBNOzU7MjY5OA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="This searches all prime numbers in the given range"/>
+            <declare name="a, b, c" type="Integer" array="False" size=""/>
+            <declare name="prime" type="Boolean" array="False" size=""/>
+            <output expression="&quot;Enter the range&quot;" newline="True"/>
+            <input variable="b"/>
+            <output expression="&quot;The prime numbers between 1 and &quot;&amp;b&amp;&quot; are &quot;" newline="True"/>
+            <for variable="a" start="2" end="b" direction="inc" step="1">
+                <comment text="As 2 is a prime number but the mod operator shows false value. So we start the range from 2"/>
+                <assign variable="prime" expression="True"/>
+                <for variable="c" start="2" end="a-1" direction="inc" step="1">
+                    <if expression="a%c==0">
+                        <then>
+                            <assign variable="prime" expression="False"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <if expression="prime==True">
+                    <then>
+                        <output expression="a" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
