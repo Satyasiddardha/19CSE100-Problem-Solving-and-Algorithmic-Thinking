@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="v j srikar"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 09:43:41 AM"/>
+        <attribute name="created" value="diBqIHNyaWthcjtERVNLVE9QLUpMOTVCVVU7MjAyMi0xMi0wOTswOTowNTozMSBBTTszMjg0"/>
+        <attribute name="edited" value="diBqIHNyaWthcjtERVNLVE9QLUpMOTVCVVU7MjAyMi0xMi0wOTswOTo0Mzo0MSBBTTsyMjszNDQ2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="declare integer index"/>
+            <declare name="index" type="Integer" array="False" size=""/>
+            <declare name="nums" type="Integer" array="True" size="10"/>
+            <comment text="take integer array upto 10"/>
+            <declare name="num" type="Integer" array="False" size=""/>
+            <for variable="index" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;enter the number  for index=[&quot;&amp;index&amp;&quot;]&quot;" newline="True"/>
+                <input variable="num"/>
+                <assign variable="nums[index]" expression="num"/>
+            </for>
+            <output expression="&quot;array contrnts are&quot;" newline="True"/>
+            <for variable="index" start="0" end="9" direction="inc" step="1">
+                <comment text="out put is displayed here "/>
+                <output expression="&quot;number[&quot;&amp;index&amp;&quot;]=&quot;&amp;nums[index]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
