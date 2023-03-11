@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="siddh"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-16 04:28:50 PM"/>
+        <attribute name="created" value="c2lkZGg7TEFQVE9QLThHSE1JS0hTOzIwMjMtMDItMTU7MDg6NTQ6NDIgUE07Mjg5NA=="/>
+        <attribute name="edited" value="c2lkZGg7TEFQVE9QLThHSE1JS0hTOzIwMjMtMDItMTY7MDQ6Mjg6NTAgUE07NTY7MzA1Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="rollnumber, actualrollnum, n, month, temp, lastvalue, day, result, x" type="Integer" array="False" size=""/>
+            <declare name="today, y" type="String" array="False" size=""/>
+            <declare name="charmonth" type="String" array="False" size=""/>
+            <output expression="&quot;enter your rollnumber&quot;" newline="True"/>
+            <input variable="rollnumber"/>
+            <assign variable="actualrollnum" expression="actualrollnum(rollnumber)"/>
+            <output expression="&quot;this is your actual rollnumber&quot; &amp;actualrollnum" newline="True"/>
+            <assign variable="n" expression="addrollnum(rollnumber)"/>
+            <output expression="n" newline="True"/>
+            <assign variable="lastvalue" expression="fibo(n)"/>
+            <assign variable="month" expression="actualrollnum%12"/>
+            <assign variable="charmonth" expression="monthuu(month)"/>
+            <output expression="charmonth" newline="True"/>
+            <assign variable="day" expression="lastvalue%28"/>
+            <output expression="day" newline="True"/>
+            <assign variable="today" expression="day&amp;charmonth"/>
+            <output expression="today" newline="True"/>
+            <assign variable="result" expression="len(today)"/>
+            <output expression="&quot;your result is&quot; &amp;result" newline="True"/>
+            <assign variable="x" expression="len(today)/2"/>
+            <assign variable="y" expression="Char(today, x)"/>
+            <output expression="y" newline="True"/>
+        </body>
+    </function>
+    <function name="actualrollnum" type="Integer" variable="actualrollnum">
+        <parameters>
+            <parameter name="rollnumber" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="actualrollnum" type="Integer" array="False" size=""/>
+            <assign variable="actualrollnum" expression="rollnumber%100"/>
+        </body>
+    </function>
+    <function name="addrollnum" type="Integer" variable="n">
+        <parameters>
+            <parameter name="rollnumber" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="n, temp, i" type="Integer" array="False" size=""/>
+            <assign variable="n" expression="0"/>
+            <for variable="i" start="1" end="5" direction="inc" step="1">
+                <assign variable="temp" expression="rollnumber/10"/>
+                <assign variable="n" expression="n+rollnumber-temp*10"/>
+                <assign variable="rollnumber" expression="rollnumber/10"/>
+            </for>
+        </body>
+    </function>
+    <function name="fibo" type="Integer" variable="lastvalue">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="lastvalue" type="Integer" array="False" size=""/>
+            <declare name="a, b, c, d" type="Integer" array="False" size=""/>
+            <assign variable="a" expression="0"/>
+            <assign variable="b" expression="1"/>
+            <output expression="a" newline="True"/>
+            <output expression="b" newline="True"/>
+            <for variable="d" start="1" end="n-2" direction="inc" step="1">
+                <assign variable="c" expression="a+b"/>
+                <output expression="c" newline="True"/>
+                <assign variable="a" expression="b"/>
+                <assign variable="b" expression="c"/>
+            </for>
+            <assign variable="lastvalue" expression="c"/>
+        </body>
+    </function>
+    <function name="monthuu" type="String" variable="charmonth">
+        <parameters>
+            <parameter name="month" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="charmonth" type="String" array="False" size=""/>
+            <declare name="sid" type="String" array="True" size="12"/>
+            <assign variable="sid[0]" expression="&quot;jan&quot;"/>
+            <assign variable="sid[1]" expression="&quot;feb&quot;"/>
+            <assign variable="sid[2]" expression="&quot;mar&quot;"/>
+            <assign variable="sid[3]" expression="&quot;apri&quot;"/>
+            <assign variable="sid[4]" expression="&quot;may&quot;"/>
+            <assign variable="sid[5]" expression="&quot;june&quot;"/>
+            <assign variable="sid[6]" expression="&quot;july&quot;"/>
+            <assign variable="sid[7]" expression="&quot;aug&quot;"/>
+            <assign variable="sid[8]" expression="&quot;sept&quot;"/>
+            <assign variable="sid[9]" expression="&quot;oct&quot;"/>
+            <assign variable="sid[10]" expression="&quot;nov&quot;"/>
+            <assign variable="sid[11]" expression="&quot;dec&quot;"/>
+            <assign variable="charmonth" expression="sid[month]"/>
+        </body>
+    </function>
+</flowgorithm>
