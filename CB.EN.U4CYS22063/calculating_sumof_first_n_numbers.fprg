@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22063"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 09:22:54 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA2MzsyMDIyMjNNQVlDMDEwMDsyMDIyLTEyLTAyOzA5OjE3OjQ3IEFNOzMwNTk="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA2MzsyMDIyMjNNQVlDMDEwMDsyMDIyLTEyLTAyOzA5OjIyOjU0IEFNOzMxOzMyMTI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;enter the value n&quot;" newline="True"/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <comment text="enter the value n"/>
+            <input variable="n"/>
+            <comment text="declare var a and c"/>
+            <declare name="a, c" type="Integer" array="False" size=""/>
+            <assign variable="c" expression="0"/>
+            <comment text="by using for loop calculating sum"/>
+            <for variable="a" start="0" end="n" direction="inc" step="1">
+                <assign variable="c" expression="a+c"/>
+            </for>
+            <comment text="c is your answer"/>
+            <output expression="c" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

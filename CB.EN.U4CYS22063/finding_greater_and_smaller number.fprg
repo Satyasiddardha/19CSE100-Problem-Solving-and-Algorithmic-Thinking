@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="siddh"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-29 10:20:34 PM"/>
+        <attribute name="created" value="c2lkZGg7TEFQVE9QLThHSE1JS0hTOzIwMjItMTItMjk7MTA6MDQ6NDQgUE07Mjg4OQ=="/>
+        <attribute name="edited" value="c2lkZGg7TEFQVE9QLThHSE1JS0hTOzIwMjItMTItMjk7MTA6MjA6MzQgUE07NjsyOTk5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, b, a, c" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter the range&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="s" type="Integer" array="True" size="n"/>
+            <assign variable="a" expression="0"/>
+            <while expression="a&lt;n">
+                <output expression="&quot;enter the number in s[&quot;&amp;a&amp;&quot;]&quot;" newline="True"/>
+                <input variable="s[a]"/>
+                <assign variable="a" expression="a+1"/>
+            </while>
+            <assign variable="b" expression="s[0]"/>
+            <for variable="a" start="0" end="n-1" direction="inc" step="1">
+                <if expression="b&lt;s[a]">
+                    <then>
+                        <assign variable="b" expression="s[a]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;the large value is &quot;&amp;b" newline="True"/>
+            <assign variable="c" expression="s[0]"/>
+            <for variable="a" start="0" end="n-1" direction="inc" step="1">
+                <if expression="c&gt;s[a]">
+                    <then>
+                        <assign variable="c" expression="s[a]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;the small value is &quot;&amp;c" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

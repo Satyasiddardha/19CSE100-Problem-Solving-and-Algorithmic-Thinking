@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="siddh"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-31 07:22:39 PM"/>
+        <attribute name="created" value="c2lkZGg7TEFQVE9QLThHSE1JS0hTOzIwMjMtMDEtMzE7MDY6NDM6MzAgUE07Mjg4NA=="/>
+        <attribute name="edited" value="c2lkZGg7TEFQVE9QLThHSE1JS0hTOzIwMjMtMDEtMzE7MDc6MjI6MzkgUE07NzszMDA1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sides, angle, angle1" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter the no of sides&quot;" newline="True"/>
+            <input variable="sides"/>
+            <assign variable="angle" expression="extangle(sides)"/>
+            <assign variable="angle1" expression="intangle(angle)"/>
+            <output expression="angle" newline="True"/>
+            <output expression="angle1" newline="True"/>
+        </body>
+    </function>
+    <function name="extangle" type="Real" variable="angle">
+        <parameters>
+            <parameter name="sides" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="angle" type="Real" array="False" size=""/>
+            <assign variable="angle" expression="360/sides"/>
+        </body>
+    </function>
+    <function name="intangle" type="Real" variable="angle1">
+        <parameters>
+            <parameter name="angle" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="angle1" type="Real" array="False" size=""/>
+            <assign variable="angle1" expression="180-angle"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22063"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-18 11:14:56 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA2MzsyMDIyMjNNQVlDMDEwMDsyMDIyLTExLTE4OzA5OjU4OjI0IEFNOzMwNjU="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA2MzsyMDIyMjNNQVlDMDEwMDsyMDIyLTExLTE4OzExOjE0OjU2IEFNOzM0OzMyMTc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="secret" type="Integer" array="False" size=""/>
+            <assign variable="secret" expression="24956"/>
+            <output expression="&quot;welcome to atm&quot;" newline="True"/>
+            <output expression="&quot;insert your card&quot;" newline="True"/>
+            <declare name="pin" type="Integer" array="False" size=""/>
+            <comment text="enter your correct pin"/>
+            <output expression="&quot;please enter your pin&quot;" newline="True"/>
+            <input variable="pin"/>
+            <if expression="secret==pin">
+                <then>
+                    <declare name="account" type="Integer" array="False" size=""/>
+                    <comment text="enter the account number "/>
+                    <output expression="&quot;enter your account number&quot;" newline="True"/>
+                    <input variable="account"/>
+                    <output expression="&quot;1.check balance 2.diposite 3.change pin 4.withdrawl 5.finish transcation&quot;" newline="True"/>
+                    <declare name="x" type="Integer" array="False" size=""/>
+                    <input variable="x"/>
+                    <if expression="x=1">
+                        <then>
+                            <comment text="check your balance here"/>
+                            <output expression="&quot;your balance is 50000&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="x=2">
+                                <then>
+                                    <declare name="balance" type="Integer" array="False" size=""/>
+                                    <output expression="&quot;enter your balance ammount&quot;" newline="True"/>
+                                    <input variable="balance"/>
+                                    <declare name="diposite" type="Integer" array="False" size=""/>
+                                    <comment text="enter the money that you want to diposite "/>
+                                    <output expression="&quot;enter the ammount you want to diposite&quot;" newline="True"/>
+                                    <input variable="diposite"/>
+                                    <output expression="&quot;your amount deposite succesfully&quot;" newline="True"/>
+                                    <declare name="newbalance" type="Integer" array="False" size=""/>
+                                    <assign variable="newbalance" expression="balance+diposite"/>
+                                    <comment text="check  your new balance"/>
+                                    <output expression="&quot;your newbalance is:&quot; &amp;newbalance" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="x=3">
+                                        <then>
+                                            <comment text="change pin"/>
+                                            <output expression="&quot;change pin&quot;" newline="True"/>
+                                            <declare name="newpin" type="Integer" array="False" size=""/>
+                                            <input variable="newpin"/>
+                                            <comment text="your pin has changed"/>
+                                            <output expression="&quot;your newpin changed succesfully&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="x=4">
+                                                <then>
+                                                    <output expression="&quot;enter the ammount you want to withdrawal&quot;" newline="True"/>
+                                                    <comment text="enter the money you want to withdrawl"/>
+                                                    <declare name="withdrawl" type="Integer" array="False" size=""/>
+                                                    <input variable="withdrawl"/>
+                                                    <if expression="withdrawl&gt;499">
+                                                        <then>
+                                                            <declare name="balance" type="Integer" array="False" size=""/>
+                                                            <output expression="&quot;enter the your balance ammount&quot;" newline="True"/>
+                                                            <input variable="balance"/>
+                                                            <declare name="newbalance" type="Integer" array="False" size=""/>
+                                                            <assign variable="newbalance" expression="balance-withdrawl"/>
+                                                            <comment text="check your new balanced"/>
+                                                            <output expression="&quot;your newbalance is:&quot; &amp;newbalance" newline="True"/>
+                                                            <comment text="collect the money from atm"/>
+                                                            <output expression="&quot;collect the money form atm&quot;" newline="True"/>
+                                                        </then>
+                                                        <else>
+                                                            <output expression="&quot;minimum transcation is greater than 499&quot;" newline="True"/>
+                                                        </else>
+                                                    </if>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;finish transcation&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                    <output expression="&quot;thank you and vist again&quot;" newline="True"/>
+                </then>
+                <else>
+                    <comment text="your pin is wrong enter the correct pin"/>
+                    <output expression="&quot;your pin is wrong please try again&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

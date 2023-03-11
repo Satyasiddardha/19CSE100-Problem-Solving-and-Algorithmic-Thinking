@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="siddh"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-05 12:46:04 PM"/>
+        <attribute name="created" value="c2lkZGg7TEFQVE9QLThHSE1JS0hTOzIwMjMtMDItMDU7MTE6MzE6MDYgQU07Mjg2Nw=="/>
+        <attribute name="edited" value="c2lkZGg7TEFQVE9QLThHSE1JS0hTOzIwMjMtMDItMDU7MTI6NDY6MDQgUE07MTI7MzA0NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="rollnumber, temp, n, lastvalue, actualrollnumber" type="Integer" array="False" size=""/>
+            <input variable="rollnumber"/>
+            <assign variable="n" expression="0"/>
+            <assign variable="actualrollnumber" expression="actualrollnum(rollnumber)"/>
+            <output expression="&quot;your rollnumber is&quot; &amp;actualrollnumber" newline="True"/>
+            <while expression="rollnumber&gt;0">
+                <assign variable="temp" expression="rollnumber/10"/>
+                <assign variable="n" expression="n+rollnumber-temp*10"/>
+                <assign variable="rollnumber" expression="rollnumber/10"/>
+            </while>
+            <output expression="&quot;your rollnumber value is&quot; &amp;n" newline="True"/>
+            <assign variable="lastvalue" expression="fibo(n)"/>
+            <output expression="lastvalue" newline="True"/>
+        </body>
+    </function>
+    <function name="actualrollnum" type="Integer" variable="actualrollnumber">
+        <parameters>
+            <parameter name="rollnumber" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="actualrollnumber" type="Integer" array="False" size=""/>
+            <assign variable="actualrollnumber" expression="rollnumber%100"/>
+        </body>
+    </function>
+    <function name="fibo" type="Integer" variable="lastvalue">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="b, j, k, fib, lastvalue" type="Integer" array="False" size=""/>
+            <assign variable="b" expression="0"/>
+            <assign variable="j" expression="1"/>
+            <assign variable="k" expression="0"/>
+            <assign variable="fib" expression="0"/>
+            <while expression="b&lt;n">
+                <assign variable="fib" expression="j+k"/>
+                <assign variable="j" expression="k"/>
+                <assign variable="k" expression="fib"/>
+                <assign variable="b" expression="b+1"/>
+                <output expression="&quot;fibonacci(b)=&quot;&amp;fib" newline="True"/>
+            </while>
+            <assign variable="lastvalue" expression="fib"/>
+        </body>
+    </function>
+</flowgorithm>

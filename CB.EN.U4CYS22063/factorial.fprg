@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="siddh"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-16 06:28:36 PM"/>
+        <attribute name="created" value="c2lkZGg7TEFQVE9QLThHSE1JS0hTOzIwMjMtMDItMTY7MDY6MDQ6MjggUE07Mjg5Mg=="/>
+        <attribute name="edited" value="c2lkZGg7TEFQVE9QLThHSE1JS0hTOzIwMjMtMDItMTY7MDY6Mjg6MzYgUE07MTszMDA1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, factorial, i" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="1"/>
+            <input variable="n"/>
+            <assign variable="factorial" expression="1"/>
+            <while expression="i&lt;=n">
+                <assign variable="factorial" expression="factorial*i"/>
+                <assign variable="i" expression="i+1"/>
+            </while>
+            <output expression="factorial" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

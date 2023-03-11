@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="siddh"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-29 07:39:21 PM"/>
+        <attribute name="created" value="c2lkZGg7TEFQVE9QLThHSE1JS0hTOzIwMjItMTItMjk7MDY6NDI6NDMgUE07Mjg5NQ=="/>
+        <attribute name="edited" value="c2lkZGg7TEFQVE9QLThHSE1JS0hTOzIwMjItMTItMjk7MDY6NDU6NDkgUE07MTtzaWRkaDtMQVBUT1AtOEdITUlLSFM7MjAyMi0xMi0yOTswNjozNzo0MCBQTTs1OTY3"/>
+        <attribute name="edited" value="c2lkZGg7TEFQVE9QLThHSE1JS0hTOzIwMjItMTItMjk7MDc6Mzk6MjEgUE07MjszMDA3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, j, n" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the range&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="numbers" type="Integer" array="True" size="n"/>
+            <assign variable="i" expression="0"/>
+            <while expression="i&lt;n">
+                <assign variable="numbers[i]" expression="i+1"/>
+                <output expression="numbers[i]" newline="True"/>
+                <assign variable="i" expression="i+1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

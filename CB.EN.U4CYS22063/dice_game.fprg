@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="harsh"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-05 10:59:25 AM"/>
+        <attribute name="created" value="aGFyc2g7SEFSU0hJVEg7MjAyMy0wMS0wNTsxMDozMDozMyBBTTsyMzg5"/>
+        <attribute name="edited" value="aGFyc2g7SEFSU0hJVEg7MjAyMy0wMS0wNTsxMDo1OToyNSBBTTsxOzI1MDk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="decision" type="String" array="False" size=""/>
+            <declare name="yes, no" type="Integer" array="False" size=""/>
+            <declare name="no1, no2" type="Integer" array="False" size=""/>
+            <output expression="&quot;do you want to play a dice game&quot;" newline="True"/>
+            <input variable="decision"/>
+            <if expression="decision=&quot;yes&quot;">
+                <then>
+                    <assign variable="no1" expression="random(6)"/>
+                    <output expression="&quot;your number is =&quot;&amp;no1" newline="True"/>
+                    <assign variable="no2" expression="random(6)"/>
+                    <output expression="&quot;computer no is=&quot;&amp;no2" newline="True"/>
+                    <output expression="&quot;do u want to play again&quot;" newline="True"/>
+                    <if expression="no1=no2">
+                        <then>
+                            <output expression="&quot;its a tie&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="no1&gt;no2">
+                                <then>
+                                    <output expression="&quot;you won the match&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;computer won the match&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                    <if expression="decision==&quot;yes&quot;">
+                        <then>
+                            <call expression="main"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;thank you for playing&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

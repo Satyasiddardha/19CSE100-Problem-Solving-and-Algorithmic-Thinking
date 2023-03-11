@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="siddh"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-05 11:31:03 AM"/>
+        <attribute name="created" value="c2lkZGg7TEFQVE9QLThHSE1JS0hTOzIwMjMtMDItMDU7MTE6MDI6MTkgQU07Mjg2OQ=="/>
+        <attribute name="edited" value="c2lkZGg7TEFQVE9QLThHSE1JS0hTOzIwMjMtMDItMDU7MTE6MzE6MDMgQU07MTsyOTcy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="rollnumber, n, rem, i" type="Integer" array="False" size=""/>
+            <input variable="rollnumber"/>
+            <assign variable="n" expression="0"/>
+            <assign variable="i" expression="1"/>
+            <while expression="rollnumber!=0">
+                <assign variable="rem" expression="rollnumber%10"/>
+                <assign variable="rollnumber" expression="rollnumber/10"/>
+                <assign variable="n" expression="n+rem"/>
+            </while>
+            <output expression="&quot;the value of n is&quot; &amp;n" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

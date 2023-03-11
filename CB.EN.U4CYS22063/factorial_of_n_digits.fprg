@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22063"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 10:08:47 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA2MzsyMDIyMjNNQVlDMDEwMDsyMDIyLTEyLTAyOzA5OjIyOjU2IEFNOzMwNTU="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA2MzsyMDIyMjNNQVlDMDEwMDsyMDIyLTEyLTAyOzEwOjA4OjQ3IEFNOzgxOzMyMTU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="here enter the value of n"/>
+            <output expression="&quot;enter the value n&quot;" newline="True"/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <comment text="declare var c and a"/>
+            <declare name="c, a" type="Integer" array="False" size=""/>
+            <assign variable="c" expression="1"/>
+            <for variable="a" start="1" end="n" direction="inc" step="1">
+                <assign variable="c" expression="c*a"/>
+            </for>
+            <output expression="c" newline="True"/>
+            <comment text="factorial answer is displayed here"/>
+            <output expression="&quot;this is the factorial of n&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
