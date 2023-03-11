@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Kolluru Srinivas"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-06 10:35:51 PM"/>
+        <attribute name="created" value="S29sbHVydSBTcmluaXZhcztERVNLVE9QLTcwQ045TFQ7MjAyMy0wMS0wNjswNzo1Nzo0NCBQTTszOTYy"/>
+        <attribute name="edited" value="S29sbHVydSBTcmluaXZhcztERVNLVE9QLTcwQ045TFQ7MjAyMy0wMS0wNjswODoxOTo0OCBQTTs1OzQwNzc="/>
+        <attribute name="edited" value="c2lkZGg7TEFQVE9QLThHSE1JS0hTOzIwMjMtMDEtMDY7MTA6MzU6NTEgUE07MTsyOTkz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, fact" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter the number for which u want factorial&quot;" newline="True"/>
+            <input variable="a"/>
+            <comment text="here we will get the input a which is captured and sent into function and calculation is made there and we will get the direct result"/>
+            <call expression="fact(a)"/>
+            <comment text="here we are calling the function called fact which was aasigned in the function so that the input is taken to the function fact"/>
+            <output expression="fact(a)" newline="True"/>
+        </body>
+    </function>
+    <function name="fact" type="Integer" variable="fact">
+        <parameters>
+            <parameter name="a" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <comment text="here we are declaring and using the logic for the factorial functions and giving logic here itself and xcan reuse it"/>
+            <declare name="fact" type="Integer" array="False" size=""/>
+            <assign variable="fact" expression="1"/>
+            <while expression="a&gt;0">
+                <assign variable="fact" expression="fact*a"/>
+                <assign variable="a" expression="a-1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
